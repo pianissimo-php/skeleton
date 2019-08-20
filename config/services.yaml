@@ -1,0 +1,8 @@
+parameters:
+  cache_dir: '../var/cache'
+  templates_dir: '../templates'
+
+services:
+  App\Controller:
+    resource: '../src/Controller/*'
+    tags: ['controller']

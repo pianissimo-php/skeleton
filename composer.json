@@ -1,0 +1,22 @@
+{
+    "name": "pianissimo-php/skeleton",
+    "description": "Skeleton for the Pianissimo framework.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jonmldr",
+            "email": "jonmldr@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "pianissimo-php/framework": "dev-master"
+    }
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use App\Core;
+use Symfony\Component\Console\Application;
+
+$core = new Core('dev', true);
+$core->boot();
+
+$cli = new Application();
+
+$commands = $core->getCommands();
+
+foreach ($commands as $command) {
+    $command = new $command($core->getContainer());
+    $cli->add($command);
+}
+
+$cli->run();
